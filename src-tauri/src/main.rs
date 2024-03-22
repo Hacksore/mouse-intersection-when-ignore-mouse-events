@@ -8,8 +8,8 @@ fn main() {
     .setup(|app| {
       let window = app.get_window("main").unwrap();
 
+      // NOTE: if this is on the JS solution will only work if the window is focused
       window.set_ignore_cursor_events(true)?;
-
       Ok(())
     })
     .run(tauri::generate_context!())
